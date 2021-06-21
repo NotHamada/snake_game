@@ -47,6 +47,7 @@ function iniciarJogo() {
 
     criarBG();
     criarCobra();
+    food();
 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
