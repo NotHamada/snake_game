@@ -8,9 +8,13 @@ snake[0] = {
 }
 
 let direction = "right";
+let food = {
+    x: Math.floor(Math.random()  * 15 + 1) * box,
+    y: Math.floor(Math.random() * 15 + 1) * box
+}
 
 function criarBG() {
-    context.fillstyle = "lightgreen";
+    context.fillStyle = "lightgreen";
     context.fillRect(0, 0, 16 = box, 16 = box);
 }
 
@@ -19,6 +23,11 @@ function criarCobra() {
         context.fillstyle = "green";
         context.fillRect(snake[i].x, snake[i].y, box, box);
     }
+}
+
+function food() {
+    context.fillStyle = "red";
+    context.fillRect(food.x, food.y, box, box);
 }
 
 document.addEventListener("keydown", update);
